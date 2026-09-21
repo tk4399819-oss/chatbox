@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ChatBox</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="authPage" class="page">
+
+    <div class="auth-box">
+
+        <div class="logo">💬</div>
+
+        <h1>ChatBox</h1>
+        <p>Simple private chatting</p>
+
+        <input id="usernameInput" type="text" placeholder="Username">
+        <input id="passwordInput" type="password" placeholder="Password">
+
+        <button id="mainAuthBtn">Create Account</button>
+
+        <button id="switchAuthBtn" class="secondary">
+            Already have an account? Login
+        </button>
+
+        <div id="authMessage"></div>
+
+    </div>
+
+</div>
+
+
+<div id="chatPage" class="page hidden">
+
+    <header>
+
+        <div class="brand">
+            💬 ChatBox
+        </div>
+
+        <div id="myUsername"></div>
+
+        <button id="logoutBtn">Logout</button>
+
+    </header>
+
+
+    <main>
+
+        <aside>
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Search username..."
+            >
+
+            <div id="userList"></div>
+
+        </aside>
+
+
+        <section class="chat-area">
+
+            <div class="chat-header">
+
+    <button id="backBtn">←</button>
+
+    <div>
+        <strong id="chatUsername">
+            Select a user
+        </strong>
+
+        <small id="chatStatus"></small>
+    </div>
+
+</div>
+
+
+            <div id="messages"></div>
+
+
+            <div class="message-box">
+
+                <input
+                    id="messageInput"
+                    type="text"
+                    placeholder="Type a message..."
+                    disabled
+                >
+
+                <button id="sendBtn" disabled>
+                    Send
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
